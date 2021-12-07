@@ -30,7 +30,7 @@ namespace TGrath
         private void InitializeComponent()
         {
             this.txbValue = new System.Windows.Forms.TextBox();
-            this.btnAdj = new System.Windows.Forms.Button();
+            this.buttonAdj = new System.Windows.Forms.Button();
             this.MGridView = new System.Windows.Forms.DataGridView();
             this.deleteALLButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -54,15 +54,11 @@ namespace TGrath
             this.label4 = new System.Windows.Forms.Label();
             this.txbStart = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.SGridView = new System.Windows.Forms.DataGridView();
-            this.btnUnity = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sheet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGridView)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // txbValue
@@ -73,15 +69,15 @@ namespace TGrath
             this.txbValue.TabIndex = 10;
             this.txbValue.Text = "1";
             // 
-            // btnAdj
+            // buttonAdj
             // 
-            this.btnAdj.Location = new System.Drawing.Point(74, 3);
-            this.btnAdj.Name = "btnAdj";
-            this.btnAdj.Size = new System.Drawing.Size(129, 24);
-            this.btnAdj.TabIndex = 7;
-            this.btnAdj.Text = "Матрица расстояний";
-            this.btnAdj.UseVisualStyleBackColor = true;
-            this.btnAdj.Click += new System.EventHandler(this.btnAdj_Click);
+            this.buttonAdj.Location = new System.Drawing.Point(74, 3);
+            this.buttonAdj.Name = "buttonAdj";
+            this.buttonAdj.Size = new System.Drawing.Size(129, 24);
+            this.buttonAdj.TabIndex = 7;
+            this.buttonAdj.Text = "Матрица расстояний";
+            this.buttonAdj.UseVisualStyleBackColor = true;
+            this.buttonAdj.Click += new System.EventHandler(this.buttonAdj_Click);
             // 
             // MGridView
             // 
@@ -135,7 +131,7 @@ namespace TGrath
             // 
             this.sheet.BackColor = System.Drawing.SystemColors.Control;
             this.sheet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sheet.Location = new System.Drawing.Point(12, 28);
+            this.sheet.Location = new System.Drawing.Point(12, 12);
             this.sheet.Name = "sheet";
             this.sheet.Size = new System.Drawing.Size(634, 415);
             this.sheet.TabIndex = 0;
@@ -147,9 +143,9 @@ namespace TGrath
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnDuty);
             this.panel1.Controls.Add(this.DGridView);
-            this.panel1.Controls.Add(this.btnAdj);
+            this.panel1.Controls.Add(this.buttonAdj);
             this.panel1.Controls.Add(this.MGridView);
-            this.panel1.Location = new System.Drawing.Point(655, 28);
+            this.panel1.Location = new System.Drawing.Point(655, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(554, 238);
             this.panel1.TabIndex = 12;
@@ -192,9 +188,9 @@ namespace TGrath
             this.panel2.Controls.Add(this.deleteButton);
             this.panel2.Controls.Add(this.drawEdgeButton);
             this.panel2.Controls.Add(this.drawVertexButton);
-            this.panel2.Location = new System.Drawing.Point(655, 272);
+            this.panel2.Location = new System.Drawing.Point(655, 256);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 171);
+            this.panel2.Size = new System.Drawing.Size(258, 171);
             this.panel2.TabIndex = 14;
             // 
             // label2
@@ -223,7 +219,7 @@ namespace TGrath
             // 
             // btnBFC
             // 
-            this.btnBFC.Location = new System.Drawing.Point(728, 501);
+            this.btnBFC.Location = new System.Drawing.Point(919, 269);
             this.btnBFC.Name = "btnBFC";
             this.btnBFC.Size = new System.Drawing.Size(131, 34);
             this.btnBFC.TabIndex = 16;
@@ -233,7 +229,7 @@ namespace TGrath
             // 
             // btnCycle
             // 
-            this.btnCycle.Location = new System.Drawing.Point(887, 501);
+            this.btnCycle.Location = new System.Drawing.Point(919, 316);
             this.btnCycle.Name = "btnCycle";
             this.btnCycle.Size = new System.Drawing.Size(131, 36);
             this.btnCycle.TabIndex = 20;
@@ -243,7 +239,7 @@ namespace TGrath
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(1038, 501);
+            this.btnPath.Location = new System.Drawing.Point(919, 362);
             this.btnPath.Name = "btnPath";
             this.btnPath.Size = new System.Drawing.Size(131, 38);
             this.btnPath.TabIndex = 21;
@@ -253,14 +249,14 @@ namespace TGrath
             // 
             // txbA
             // 
-            this.txbA.Location = new System.Drawing.Point(1038, 554);
+            this.txbA.Location = new System.Drawing.Point(1056, 378);
             this.txbA.Name = "txbA";
             this.txbA.Size = new System.Drawing.Size(47, 20);
             this.txbA.TabIndex = 22;
             // 
             // txbB
             // 
-            this.txbB.Location = new System.Drawing.Point(1122, 554);
+            this.txbB.Location = new System.Drawing.Point(1109, 378);
             this.txbB.Name = "txbB";
             this.txbB.Size = new System.Drawing.Size(47, 20);
             this.txbB.TabIndex = 23;
@@ -268,7 +264,7 @@ namespace TGrath
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1038, 538);
+            this.label3.Location = new System.Drawing.Point(1056, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 24;
@@ -277,7 +273,7 @@ namespace TGrath
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1122, 538);
+            this.label4.Location = new System.Drawing.Point(1109, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 25;
@@ -285,7 +281,7 @@ namespace TGrath
             // 
             // txbStart
             // 
-            this.txbStart.Location = new System.Drawing.Point(728, 554);
+            this.txbStart.Location = new System.Drawing.Point(1059, 283);
             this.txbStart.Name = "txbStart";
             this.txbStart.Size = new System.Drawing.Size(44, 20);
             this.txbStart.TabIndex = 26;
@@ -293,49 +289,17 @@ namespace TGrath
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(730, 538);
+            this.label5.Location = new System.Drawing.Point(1061, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 27;
             this.label5.Text = "начало";
-            // 
-            // SGridView
-            // 
-            this.SGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SGridView.Location = new System.Drawing.Point(887, 293);
-            this.SGridView.Name = "SGridView";
-            this.SGridView.Size = new System.Drawing.Size(322, 202);
-            this.SGridView.TabIndex = 28;
-            // 
-            // btnUnity
-            // 
-            this.btnUnity.Location = new System.Drawing.Point(1001, 268);
-            this.btnUnity.Name = "btnUnity";
-            this.btnUnity.Size = new System.Drawing.Size(107, 23);
-            this.btnUnity.TabIndex = 29;
-            this.btnUnity.Text = "матрица кр. S+P";
-            this.btnUnity.UseVisualStyleBackColor = true;
-            this.btnUnity.Click += new System.EventHandler(this.btnShortest_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(925, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Ишембитов Тагир ПРО-230 | Вариант 23 | Найти путь из города А в город В с минимал" +
-    "ьной величиной S + P, где S – сумма длин дорог пути, а P- сумма пошлин проезжаем" +
-    "ых дорог\r\n";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1221, 579);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnUnity);
-            this.Controls.Add(this.SGridView);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbStart);
             this.Controls.Add(this.label4);
@@ -357,7 +321,6 @@ namespace TGrath
             ((System.ComponentModel.ISupportInitialize)(this.DGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +333,7 @@ namespace TGrath
         private System.Windows.Forms.Button drawEdgeButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button deleteALLButton;
-        private System.Windows.Forms.Button btnAdj;
+        private System.Windows.Forms.Button buttonAdj;
         private System.Windows.Forms.TextBox txbValue;
         private System.Windows.Forms.DataGridView MGridView;
         private System.Windows.Forms.Panel panel1;
@@ -390,9 +353,6 @@ namespace TGrath
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbStart;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView SGridView;
-        private System.Windows.Forms.Button btnUnity;
-        private System.Windows.Forms.Label label6;
     }
 }
 

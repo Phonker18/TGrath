@@ -17,7 +17,6 @@ namespace TGrath
         List<Edge> E;
         int[,] AMatrix; //матрица смежности
         int[,] DutyMatrix;
-        int[,] UnityMatrix;
         int selected1; //выбранные вершины, для соединения линиями
         int selected2;
 
@@ -85,7 +84,7 @@ namespace TGrath
         }
 
         //кнопка - матрица смежности
-        private void btnAdj_Click(object sender, EventArgs e)
+        private void buttonAdj_Click(object sender, EventArgs e)
         {
             createAdjAndOut();
         }
@@ -219,7 +218,6 @@ namespace TGrath
         private int ShortestPath(int start, int end, int[,] matrix)
         {
             txbRes.Text = "";
-            bool flag = true;
             bool[] visited = new bool[V.Count];
             int visitedCount = 0;
             int[] dist = new int[V.Count];
@@ -265,18 +263,14 @@ namespace TGrath
                 if (i == V.Count)
                 {
                     txbRes.Text = "Между вершинами нет пути";
-                    flag = false;
                     break;
                 }
             }
 
+            foreach (var v in path)
+                txbRes.Text += " -> " + (v + 1);
             int distance = dist[end];
-            if (flag==true)
-            {
-                foreach (var v in path)
-                    txbRes.Text += " -> " + (v + 1);
-                txbRes.Text += $" | Величина S+P = {distance}";
-            }
+            txbRes.Text += $" | Величина S+P = {distance}";
             return distance;
         }
 
@@ -436,43 +430,21 @@ namespace TGrath
         {
             createDutyAndOut();
         }
-        private void createShortestAndOut()
+
+        private void btnPath_Click(object sender, EventArgs e)
         {
-            UnityMatrix = new int[V.Count, V.Count];
-            G.fillUnityMatrix(V.Count, E, UnityMatrix);
-            int[,] ShortestMatrix = new int[V.Count, V.Count];
+            int[,] UnityMatrix = new int[V.Count, V.Count];
             for (int i = 0; i < V.Count; i++)
             {
                 for (int j = 0; j < V.Count; j++)
                 {
-                    if (i == j) ShortestMatrix[i, j] = 0;
-                    else ShortestMatrix[i, j] = ShortestMatrix[j, i] = ShortestPath(i, j, UnityMatrix);
+                    if (i == j) UnityMatrix[i, j] = 0;
+                    else UnityMatrix[i, j] = UnityMatrix[j, i] = AMatrix[i, j] + DutyMatrix[i, j];
                 }
             }
-            txbRes.Text = "";
-            SGridView.RowCount = V.Count;
-            SGridView.ColumnCount = V.Count;
-            for (int i = 0; i < SGridView.RowCount; i++)
-            {
-                SGridView.Columns[i].HeaderText = (i + 1).ToString();
-                SGridView.Rows[i].HeaderCell.Value = (i + 1).ToString();
-                for (int j = 0; j < SGridView.ColumnCount; j++)
-                {
-                    SGridView.Rows[i].Cells[j].Value = ShortestMatrix[i, j];
-                }
-            }
-        }
-        private void btnPath_Click(object sender, EventArgs e)
-        {
             int start = Convert.ToInt32(txbA.Text);
             int end = Convert.ToInt32(txbB.Text);
             ShortestPath(start - 1, end - 1, UnityMatrix);
-        }
-
-        
-        private void btnShortest_Click(object sender, EventArgs e)
-        {
-            createShortestAndOut();
         }
     }
 
