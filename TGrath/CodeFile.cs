@@ -133,5 +133,16 @@ namespace TGrath
                 matrix[E[i].v2, E[i].v1] = E[i].duty;
             }
         }
+        public void fillUnityMatrix(int numberV, List<Edge> E, int[,] matrix)
+        {
+            for (int i = 0; i < numberV; i++)
+                for (int j = 0; j < numberV; j++)
+                    matrix[i, j] = 0;
+            for (int i = 0; i < E.Count; i++)
+            {
+                matrix[E[i].v1, E[i].v2] = E[i].value + E[i].duty;
+                matrix[E[i].v2, E[i].v1] = E[i].value + E[i].duty;
+            }
+        }
     }
 }
